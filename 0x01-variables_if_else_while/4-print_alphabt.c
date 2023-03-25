@@ -2,24 +2,23 @@
 #include <unistd.h>
 /**
  * main - Entry point
- * Description: prints numbers
+ * Description: prints lowercase alphabets
  * Return: Always 0 (success)
  */
 int main(void)
 {
-	int i;
+	int ch;
 
-	for (i = '0'; i <= '9' ; i++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(i);
-
-		if (i != '9')
+		if (ch != 'e' && ch != 'q')
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(ch);
+		}
+		else
+		{
 		}
 	}
-
 	putchar('\n');
 	return (0);
 }
