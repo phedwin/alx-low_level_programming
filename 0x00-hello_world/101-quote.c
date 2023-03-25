@@ -1,18 +1,23 @@
-#include<unistd.h>
+#include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Description: print a quote using write function
- *    ssize_t write(int fd, const void *buf, size_t count);
- *
- * Return: This time we return an error 1.
-*/
+ * main - prints to string
+ * Description: Prints "and that piece of art is useful.." without puts
+ * Return: 1
+ */
 
 int main(void)
 {
-	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
-	write(1, quo, 59);
-	return (1);
+char *s = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+long l = 59;
+long fd = 1;
+long syscall = 1;
+long ret = 0;
+__asm__ ("syscall"
+: "=a" (ret)
+: "a" (syscall),
+"D" (fd),
+"S" (s),
+"d" (l));
+return (1);
 }
