@@ -39,3 +39,4 @@
 	- If the number passed as the argument is negative, print `0`, followed by a new line.
 	- You can use an unlimited number of coins of values 25, 10, 5, 2, and 1 cent.
 	- Compile the code this way: `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-change.c -o change`
+-- @phedwine c 2023
